@@ -102,6 +102,12 @@
     <Compile Include="OrdersToDishesForm.Designer.cs">
       <DependentUpon>OrdersToDishesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PositionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionsForm.Designer.cs">
+      <DependentUpon>PositionsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductProvidersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrdersToDishesForm.resx">
       <DependentUpon>OrdersToDishesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionsForm.resx">
+      <DependentUpon>PositionsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductProvidersForm.resx">
       <DependentUpon>ProductProvidersForm.cs</DependentUpon>

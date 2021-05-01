@@ -203,7 +203,7 @@ namespace kursologV2
             // 
             this.closeButton.Location = new System.Drawing.Point(347, 68);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(75, 49);
+            this.closeButton.Size = new System.Drawing.Size(81, 49);
             this.closeButton.TabIndex = 55;
             this.closeButton.Text = "Закрыть форму";
             this.closeButton.UseVisualStyleBackColor = true;

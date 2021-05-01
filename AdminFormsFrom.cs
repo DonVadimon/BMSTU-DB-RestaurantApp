@@ -21,5 +21,13 @@ namespace kursologV2
         {
             Close();
         }
+
+        private void positionsBtn_Click(object sender, EventArgs e)
+        {
+            PositionsForm f = new PositionsForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

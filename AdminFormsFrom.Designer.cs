@@ -81,6 +81,7 @@ namespace kursologV2
             this.positionsBtn.TabIndex = 10;
             this.positionsBtn.Text = "Должности";
             this.positionsBtn.UseVisualStyleBackColor = true;
+            this.positionsBtn.Click += new System.EventHandler(this.positionsBtn_Click);
             // 
             // AdminFormsFrom
             // 

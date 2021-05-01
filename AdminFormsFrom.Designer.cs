@@ -63,6 +63,7 @@ namespace kursologV2
             this.legalDataBtn.TabIndex = 12;
             this.legalDataBtn.Text = "Юридические данные";
             this.legalDataBtn.UseVisualStyleBackColor = true;
+            this.legalDataBtn.Click += new System.EventHandler(this.legalDataBtn_Click);
             // 
             // employeesBtn
             // 

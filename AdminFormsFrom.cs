@@ -37,5 +37,13 @@ namespace kursologV2
             f.ShowDialog(this);
             Show();
         }
+
+        private void legalDataBtn_Click(object sender, EventArgs e)
+        {
+            LegalDataForm f = new LegalDataForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

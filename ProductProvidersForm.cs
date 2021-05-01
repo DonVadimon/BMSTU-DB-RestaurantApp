@@ -53,6 +53,7 @@ namespace kursologV2
         {
             providerNameTextBox.Text = ProductProviderModel.Name;
             phoneTextBox.Text = ProductProviderModel.Phone;
+            MessageBox.Show(phoneTextBox.Text.Length.ToString());
             locationTextBox.Text = ProductProviderModel.Location;
             deliveryDateTimePicker.Value = ProductProviderModel.DeliveryTime;
         }

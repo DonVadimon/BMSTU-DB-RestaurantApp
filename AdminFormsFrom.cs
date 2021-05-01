@@ -29,5 +29,13 @@ namespace kursologV2
             f.ShowDialog(this);
             Show();
         }
+
+        private void employeesBtn_Click(object sender, EventArgs e)
+        {
+            EmployeesForm f = new EmployeesForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

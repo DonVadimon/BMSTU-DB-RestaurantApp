@@ -55,6 +55,7 @@ namespace kursologV2
             this.productsBtn.TabIndex = 16;
             this.productsBtn.Text = "Склад";
             this.productsBtn.UseVisualStyleBackColor = true;
+            this.productsBtn.Click += new System.EventHandler(this.productsBtn_Click);
             // 
             // providersBtn
             // 

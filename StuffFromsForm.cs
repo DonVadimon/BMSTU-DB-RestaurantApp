@@ -53,5 +53,13 @@ namespace kursologV2
             f.ShowDialog(this);
             Show();
         }
+
+        private void productsBtn_Click(object sender, EventArgs e)
+        {
+            ProductsForm f = new ProductsForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

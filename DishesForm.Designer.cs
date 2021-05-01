@@ -93,7 +93,7 @@ namespace kursologV2
             // 
             this.weigthNumericUpDown.Location = new System.Drawing.Point(222, 247);
             this.weigthNumericUpDown.Maximum = new decimal(new int[] {
-            10000,
+            100000,
             0,
             0,
             0});
@@ -105,7 +105,7 @@ namespace kursologV2
             // 
             this.priceNumericUpDown.Location = new System.Drawing.Point(225, 105);
             this.priceNumericUpDown.Maximum = new decimal(new int[] {
-            10000,
+            100000,
             0,
             0,
             0});

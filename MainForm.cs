@@ -48,7 +48,7 @@ namespace kursologV2
         private void infoBtn_Click(object sender, EventArgs e)
         {
             InfoFrom f = new InfoFrom();
-            Show();
+            f.Show();
         }
 
         private void reportsBtn_Click(object sender, EventArgs e)

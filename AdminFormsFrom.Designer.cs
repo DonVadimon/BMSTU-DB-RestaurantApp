@@ -54,6 +54,7 @@ namespace kursologV2
             this.tablesBtn.TabIndex = 13;
             this.tablesBtn.Text = "Столики";
             this.tablesBtn.UseVisualStyleBackColor = true;
+            this.tablesBtn.Click += new System.EventHandler(this.tablesBtn_Click);
             // 
             // legalDataBtn
             // 

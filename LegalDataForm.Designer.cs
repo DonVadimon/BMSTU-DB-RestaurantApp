@@ -87,6 +87,7 @@ namespace kursologV2
             this.closeBtn.TabIndex = 92;
             this.closeBtn.Text = "Закрыть форму";
             this.closeBtn.UseVisualStyleBackColor = true;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // saveBtn
             // 

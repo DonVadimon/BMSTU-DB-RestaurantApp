@@ -100,5 +100,10 @@ namespace kursologV2
                 clearInputs();
             }
         }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

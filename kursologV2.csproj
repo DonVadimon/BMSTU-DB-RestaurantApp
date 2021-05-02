@@ -153,6 +153,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>suetaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TablesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TablesForm.Designer.cs">
+      <DependentUpon>TablesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UnitsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StuffFromsForm.resx">
       <DependentUpon>StuffFromsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TablesForm.resx">
+      <DependentUpon>TablesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UnitsForm.resx">
       <DependentUpon>UnitsForm.cs</DependentUpon>

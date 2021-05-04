@@ -204,6 +204,12 @@
     <Compile Include="ReportsForm.Designer.cs">
       <DependentUpon>ReportsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportTablesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportTablesForm.Designer.cs">
+      <DependentUpon>ReportTablesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SQLQueryBuilder.cs" />
     <Compile Include="SQLQueryDispatcher.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -299,6 +305,9 @@
     <EmbeddedResource Include="ReportsForm.resx">
       <DependentUpon>ReportsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportTablesForm.resx">
+      <DependentUpon>ReportTablesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StuffFromsForm.resx">
       <DependentUpon>StuffFromsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -372,6 +381,7 @@
     <EmbeddedResource Include="ReportDishes.rdlc" />
     <EmbeddedResource Include="ReportProviders.rdlc" />
     <EmbeddedResource Include="ReportNDS.rdlc" />
+    <EmbeddedResource Include="ReportTables.rdlc" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

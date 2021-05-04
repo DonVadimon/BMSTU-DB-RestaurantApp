@@ -61,5 +61,13 @@ namespace kursologV2
             f.ShowDialog(this);
             Show();
         }
+
+        private void tablesListBtn_Click(object sender, EventArgs e)
+        {
+            ReportTablesForm f = new ReportTablesForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

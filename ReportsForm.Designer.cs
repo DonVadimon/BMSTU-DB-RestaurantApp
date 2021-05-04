@@ -58,6 +58,7 @@ namespace kursologV2
             this.tablesListBtn.TabIndex = 22;
             this.tablesListBtn.Text = "Столики";
             this.tablesListBtn.UseVisualStyleBackColor = true;
+            this.tablesListBtn.Click += new System.EventHandler(this.tablesListBtn_Click);
             // 
             // NDSForeachDishBtn
             // 

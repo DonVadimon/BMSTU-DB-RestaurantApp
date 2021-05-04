@@ -153,6 +153,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportDishesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDishesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDishesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportDishesForm.Designer.cs">
+      <DependentUpon>ReportDishesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportEmployeesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -253,6 +264,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportDishesForm.resx">
+      <DependentUpon>ReportDishesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportEmployeesForm.resx">
       <DependentUpon>ReportEmployeesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +295,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ReportDishesDataSet.xsc">
+      <DependentUpon>ReportDishesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReportDishesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDishesDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportDishesDataSet.xss">
+      <DependentUpon>ReportDishesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="ReportEmployeesDataSet.xsc">
       <DependentUpon>ReportEmployeesDataSet.xsd</DependentUpon>
     </None>
@@ -310,6 +335,7 @@
   <ItemGroup>
     <EmbeddedResource Include="ReportEmployees.rdlc" />
     <EmbeddedResource Include="ReportPositions.rdlc" />
+    <EmbeddedResource Include="ReportDishes.rdlc" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

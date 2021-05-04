@@ -37,5 +37,13 @@ namespace kursologV2
             f.ShowDialog(this);
             Show();
         }
+
+        private void dishesListBtn_Click(object sender, EventArgs e)
+        {
+            ReportDishesForm f = new ReportDishesForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

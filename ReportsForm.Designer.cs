@@ -78,6 +78,7 @@ namespace kursologV2
             this.dishesListBtn.TabIndex = 20;
             this.dishesListBtn.Text = "Меню Ресторана";
             this.dishesListBtn.UseVisualStyleBackColor = true;
+            this.dishesListBtn.Click += new System.EventHandler(this.dishesListBtn_Click);
             // 
             // employeesListBtn
             // 

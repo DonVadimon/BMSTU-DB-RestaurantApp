@@ -29,5 +29,13 @@ namespace kursologV2
             f.ShowDialog(this);
             Show();
         }
+
+        private void positionsListBtn_Click(object sender, EventArgs e)
+        {
+            ReportPositionsForm f = new ReportPositionsForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

@@ -109,6 +109,7 @@ namespace kursologV2
             this.positionsListBtn.TabIndex = 17;
             this.positionsListBtn.Text = "Должности";
             this.positionsListBtn.UseVisualStyleBackColor = true;
+            this.positionsListBtn.Click += new System.EventHandler(this.positionsListBtn_Click);
             // 
             // backBtn
             // 

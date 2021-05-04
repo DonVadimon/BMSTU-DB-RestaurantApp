@@ -88,6 +88,7 @@ namespace kursologV2
             this.employeesListBtn.TabIndex = 19;
             this.employeesListBtn.Text = "Список сотрудников";
             this.employeesListBtn.UseVisualStyleBackColor = true;
+            this.employeesListBtn.Click += new System.EventHandler(this.employeesListBtn_Click);
             // 
             // providersListBtn
             // 

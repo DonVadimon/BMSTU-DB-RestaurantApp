@@ -145,6 +145,11 @@
     <Compile Include="ProductProvidersForm.Designer.cs">
       <DependentUpon>ProductProvidersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProductsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +191,12 @@
     </Compile>
     <Compile Include="ReportPositionsForm.Designer.cs">
       <DependentUpon>ReportPositionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportProductsForm.Designer.cs">
+      <DependentUpon>ReportProductsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportProvidersDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -299,6 +310,9 @@
     <EmbeddedResource Include="ReportPositionsForm.resx">
       <DependentUpon>ReportPositionsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportProductsForm.resx">
+      <DependentUpon>ReportProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportProvidersForm.resx">
       <DependentUpon>ReportProvidersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +332,17 @@
       <DependentUpon>UnitsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="ProductsDataSet.xsc">
+      <DependentUpon>ProductsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProductsDataSet.xss">
+      <DependentUpon>ProductsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -382,6 +407,7 @@
     <EmbeddedResource Include="ReportProviders.rdlc" />
     <EmbeddedResource Include="ReportNDS.rdlc" />
     <EmbeddedResource Include="ReportTables.rdlc" />
+    <EmbeddedResource Include="ReportProducts.rdlc" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -48,6 +48,7 @@ namespace kursologV2
             this.productsListBtn.TabIndex = 23;
             this.productsListBtn.Text = "Продукты на складе";
             this.productsListBtn.UseVisualStyleBackColor = true;
+            this.productsListBtn.Click += new System.EventHandler(this.productsListBtn_Click);
             // 
             // tablesListBtn
             // 

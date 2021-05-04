@@ -68,6 +68,7 @@ namespace kursologV2
             this.NDSForeachDishBtn.TabIndex = 21;
             this.NDSForeachDishBtn.Text = "НДС для каждого блюда";
             this.NDSForeachDishBtn.UseVisualStyleBackColor = true;
+            this.NDSForeachDishBtn.Click += new System.EventHandler(this.NDSForeachDishBtn_Click);
             // 
             // dishesListBtn
             // 

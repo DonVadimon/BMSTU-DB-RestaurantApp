@@ -175,6 +175,12 @@
     <Compile Include="ReportEmployeesForm.Designer.cs">
       <DependentUpon>ReportEmployeesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportNDSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportNDSForm.Designer.cs">
+      <DependentUpon>ReportNDSForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportPositionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +287,9 @@
     <EmbeddedResource Include="ReportEmployeesForm.resx">
       <DependentUpon>ReportEmployeesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportNDSForm.resx">
+      <DependentUpon>ReportNDSForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportPositionsForm.resx">
       <DependentUpon>ReportPositionsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,6 +371,7 @@
     <EmbeddedResource Include="ReportPositions.rdlc" />
     <EmbeddedResource Include="ReportDishes.rdlc" />
     <EmbeddedResource Include="ReportProviders.rdlc" />
+    <EmbeddedResource Include="ReportNDS.rdlc" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -53,5 +53,13 @@ namespace kursologV2
             f.ShowDialog(this);
             Show();
         }
+
+        private void NDSForeachDishBtn_Click(object sender, EventArgs e)
+        {
+            ReportNDSForm f = new ReportNDSForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

@@ -43,7 +43,7 @@ namespace kursologV2
             this.addButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ordersPriceReportBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.ordersDataGridView = new System.Windows.Forms.DataGridView();
             this.orderIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -180,23 +180,24 @@ namespace kursologV2
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // button1
+            // ordersPriceReportBtn
             // 
-            this.button1.Location = new System.Drawing.Point(194, 667);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "ОТЧЕТ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ordersPriceReportBtn.Location = new System.Drawing.Point(194, 667);
+            this.ordersPriceReportBtn.Name = "ordersPriceReportBtn";
+            this.ordersPriceReportBtn.Size = new System.Drawing.Size(75, 23);
+            this.ordersPriceReportBtn.TabIndex = 61;
+            this.ordersPriceReportBtn.Text = "ОТЧЕТ";
+            this.ordersPriceReportBtn.UseVisualStyleBackColor = true;
+            this.ordersPriceReportBtn.Click += new System.EventHandler(this.ordersPriceReportBtn_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(58, 672);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 13);
+            this.label4.Size = new System.Drawing.Size(107, 13);
             this.label4.TabIndex = 60;
-            this.label4.Text = "Стоимость заказа";
+            this.label4.Text = "Стоимость заказов";
             // 
             // ordersDataGridView
             // 
@@ -303,7 +304,7 @@ namespace kursologV2
             this.Controls.Add(this.getWaitersToolStrip);
             this.Controls.Add(this.dishesDataGridView);
             this.Controls.Add(this.ordersDataGridView);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ordersPriceReportBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.controlsPanel);
             this.Controls.Add(this.tableComboBox);
@@ -341,7 +342,7 @@ namespace kursologV2
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ordersPriceReportBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView ordersDataGridView;
         private suetaDataSet suetaDataSet;

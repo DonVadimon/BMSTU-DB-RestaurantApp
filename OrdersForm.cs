@@ -193,5 +193,13 @@ namespace kursologV2
             updateView();
             updateInputs();
         }
+
+        private void ordersPriceReportBtn_Click(object sender, EventArgs e)
+        {
+            ReportOrdersForm f = new ReportOrdersForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

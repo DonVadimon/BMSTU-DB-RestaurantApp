@@ -42,16 +42,16 @@ namespace kursologV2
             this.saveButton = new System.Windows.Forms.Button();
             this.maxPeopleCountNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.tablesDataGridView = new System.Windows.Forms.DataGridView();
-            this.suetaDataSet = new kursologV2.suetaDataSet();
-            this.tablesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablesTableAdapter = new kursologV2.suetaDataSetTableAdapters.TablesTableAdapter();
             this.tableIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maxPeopleCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tablesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.suetaDataSet = new kursologV2.suetaDataSet();
+            this.tablesTableAdapter = new kursologV2.suetaDataSetTableAdapters.TablesTableAdapter();
             this.controlsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxPeopleCountNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -62,6 +62,7 @@ namespace kursologV2
             this.button1.TabIndex = 76;
             this.button1.Text = "ОТЧЕТ";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableIdTextBox
             // 
@@ -174,20 +175,6 @@ namespace kursologV2
             this.tablesDataGridView.TabIndex = 79;
             this.tablesDataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tablesDataGridView_RowHeaderMouseClick);
             // 
-            // suetaDataSet
-            // 
-            this.suetaDataSet.DataSetName = "suetaDataSet";
-            this.suetaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tablesBindingSource
-            // 
-            this.tablesBindingSource.DataMember = "Tables";
-            this.tablesBindingSource.DataSource = this.suetaDataSet;
-            // 
-            // tablesTableAdapter
-            // 
-            this.tablesTableAdapter.ClearBeforeFill = true;
-            // 
             // tableIdDataGridViewTextBoxColumn
             // 
             this.tableIdDataGridViewTextBoxColumn.DataPropertyName = "TableId";
@@ -201,6 +188,20 @@ namespace kursologV2
             this.maxPeopleCountDataGridViewTextBoxColumn.HeaderText = "MaxPeopleCount";
             this.maxPeopleCountDataGridViewTextBoxColumn.Name = "maxPeopleCountDataGridViewTextBoxColumn";
             this.maxPeopleCountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tablesBindingSource
+            // 
+            this.tablesBindingSource.DataMember = "Tables";
+            this.tablesBindingSource.DataSource = this.suetaDataSet;
+            // 
+            // suetaDataSet
+            // 
+            this.suetaDataSet.DataSetName = "suetaDataSet";
+            this.suetaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tablesTableAdapter
+            // 
+            this.tablesTableAdapter.ClearBeforeFill = true;
             // 
             // TablesForm
             // 
@@ -222,8 +223,8 @@ namespace kursologV2
             this.controlsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.maxPeopleCountNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

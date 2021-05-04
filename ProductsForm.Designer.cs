@@ -30,7 +30,7 @@ namespace kursologV2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.productsReportBtn = new System.Windows.Forms.Button();
             this.unitComboBox = new System.Windows.Forms.ComboBox();
             this.unitsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suetaDataSet = new kursologV2.suetaDataSet();
@@ -60,6 +60,7 @@ namespace kursologV2
             this.providerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unitIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.unitsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productProvidersBindingSource)).BeginInit();
@@ -70,21 +71,22 @@ namespace kursologV2
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // productsReportBtn
             // 
-            this.button1.Location = new System.Drawing.Point(68, 723);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "ОТЧЕТ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.productsReportBtn.Location = new System.Drawing.Point(53, 786);
+            this.productsReportBtn.Name = "productsReportBtn";
+            this.productsReportBtn.Size = new System.Drawing.Size(75, 23);
+            this.productsReportBtn.TabIndex = 68;
+            this.productsReportBtn.Text = "ОТЧЕТ";
+            this.productsReportBtn.UseVisualStyleBackColor = true;
+            this.productsReportBtn.Click += new System.EventHandler(this.productsReportBtn_Click);
             // 
             // unitComboBox
             // 
             this.unitComboBox.DataSource = this.unitsBindingSource;
             this.unitComboBox.DisplayMember = "Unit";
             this.unitComboBox.FormattingEnabled = true;
-            this.unitComboBox.Location = new System.Drawing.Point(297, 190);
+            this.unitComboBox.Location = new System.Drawing.Point(282, 253);
             this.unitComboBox.Name = "unitComboBox";
             this.unitComboBox.Size = new System.Drawing.Size(438, 21);
             this.unitComboBox.TabIndex = 67;
@@ -105,7 +107,7 @@ namespace kursologV2
             this.providerComboBox.DataSource = this.productProvidersBindingSource;
             this.providerComboBox.DisplayMember = "ProviderName";
             this.providerComboBox.FormattingEnabled = true;
-            this.providerComboBox.Location = new System.Drawing.Point(297, 133);
+            this.providerComboBox.Location = new System.Drawing.Point(282, 196);
             this.providerComboBox.Name = "providerComboBox";
             this.providerComboBox.Size = new System.Drawing.Size(438, 21);
             this.providerComboBox.TabIndex = 66;
@@ -118,7 +120,7 @@ namespace kursologV2
             // 
             // productNameTextBox
             // 
-            this.productNameTextBox.Location = new System.Drawing.Point(297, 19);
+            this.productNameTextBox.Location = new System.Drawing.Point(282, 82);
             this.productNameTextBox.Name = "productNameTextBox";
             this.productNameTextBox.Size = new System.Drawing.Size(438, 20);
             this.productNameTextBox.TabIndex = 63;
@@ -126,7 +128,7 @@ namespace kursologV2
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(65, 262);
+            this.label6.Location = new System.Drawing.Point(50, 325);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 13);
             this.label6.TabIndex = 62;
@@ -135,7 +137,7 @@ namespace kursologV2
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(65, 198);
+            this.label5.Location = new System.Drawing.Point(50, 261);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 13);
             this.label5.TabIndex = 61;
@@ -144,7 +146,7 @@ namespace kursologV2
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(65, 141);
+            this.label4.Location = new System.Drawing.Point(50, 204);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 60;
@@ -153,7 +155,7 @@ namespace kursologV2
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 78);
+            this.label3.Location = new System.Drawing.Point(50, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 13);
             this.label3.TabIndex = 59;
@@ -162,7 +164,7 @@ namespace kursologV2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 22);
+            this.label2.Location = new System.Drawing.Point(50, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 58;
@@ -174,7 +176,7 @@ namespace kursologV2
             this.controlsPanel.Controls.Add(this.addButton);
             this.controlsPanel.Controls.Add(this.closeButton);
             this.controlsPanel.Controls.Add(this.saveButton);
-            this.controlsPanel.Location = new System.Drawing.Point(264, 626);
+            this.controlsPanel.Location = new System.Drawing.Point(249, 689);
             this.controlsPanel.Name = "controlsPanel";
             this.controlsPanel.Size = new System.Drawing.Size(471, 120);
             this.controlsPanel.TabIndex = 98;
@@ -225,7 +227,7 @@ namespace kursologV2
             // 
             // priceNumericUpDown
             // 
-            this.priceNumericUpDown.Location = new System.Drawing.Point(297, 71);
+            this.priceNumericUpDown.Location = new System.Drawing.Point(282, 134);
             this.priceNumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -237,7 +239,7 @@ namespace kursologV2
             // 
             // weightNumericUpDown
             // 
-            this.weightNumericUpDown.Location = new System.Drawing.Point(297, 255);
+            this.weightNumericUpDown.Location = new System.Drawing.Point(282, 318);
             this.weightNumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -272,7 +274,7 @@ namespace kursologV2
             this.unitIdDataGridViewTextBoxColumn,
             this.weightDataGridViewTextBoxColumn});
             this.productsDataGridView.DataSource = this.productsBindingSource;
-            this.productsDataGridView.Location = new System.Drawing.Point(68, 301);
+            this.productsDataGridView.Location = new System.Drawing.Point(53, 364);
             this.productsDataGridView.Name = "productsDataGridView";
             this.productsDataGridView.Size = new System.Drawing.Size(652, 295);
             this.productsDataGridView.TabIndex = 102;
@@ -314,16 +316,27 @@ namespace kursologV2
             this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
             this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(45, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(268, 33);
+            this.label1.TabIndex = 103;
+            this.label1.Text = "Склад Продуктов";
+            // 
             // ProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 787);
+            this.ClientSize = new System.Drawing.Size(800, 819);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.productsDataGridView);
             this.Controls.Add(this.weightNumericUpDown);
             this.Controls.Add(this.priceNumericUpDown);
             this.Controls.Add(this.controlsPanel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.productsReportBtn);
             this.Controls.Add(this.unitComboBox);
             this.Controls.Add(this.providerComboBox);
             this.Controls.Add(this.productNameTextBox);
@@ -350,7 +363,7 @@ namespace kursologV2
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button productsReportBtn;
         private System.Windows.Forms.ComboBox unitComboBox;
         private System.Windows.Forms.ComboBox providerComboBox;
         private System.Windows.Forms.TextBox productNameTextBox;
@@ -380,5 +393,6 @@ namespace kursologV2
         private System.Windows.Forms.DataGridViewTextBoxColumn providerIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn unitIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
     }
 }

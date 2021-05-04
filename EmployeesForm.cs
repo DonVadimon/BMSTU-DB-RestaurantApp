@@ -155,5 +155,13 @@ namespace kursologV2
         {
             Close();
         }
+
+        private void employeesListReportBtn_Click(object sender, EventArgs e)
+        {
+            ReportEmployeesForm f = new ReportEmployeesForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

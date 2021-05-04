@@ -30,7 +30,7 @@ namespace kursologV2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.providersReportBtn = new System.Windows.Forms.Button();
             this.locationTextBox = new System.Windows.Forms.TextBox();
             this.providerNameTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,30 +44,31 @@ namespace kursologV2
             this.closeButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.productsProvidersDataGridView = new System.Windows.Forms.DataGridView();
-            this.suetaDataSet = new kursologV2.suetaDataSet();
-            this.productProvidersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productProvidersTableAdapter = new kursologV2.suetaDataSetTableAdapters.ProductProvidersTableAdapter();
             this.providerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.providerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deliveryTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productProvidersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.suetaDataSet = new kursologV2.suetaDataSet();
+            this.productProvidersTableAdapter = new kursologV2.suetaDataSetTableAdapters.ProductProvidersTableAdapter();
             this.deliveryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.phoneTextBox = new System.Windows.Forms.MaskedTextBox();
             this.controlsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsProvidersDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productProvidersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // providersReportBtn
             // 
-            this.button1.Location = new System.Drawing.Point(75, 672);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "ОТЧЕТ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.providersReportBtn.Location = new System.Drawing.Point(75, 672);
+            this.providersReportBtn.Name = "providersReportBtn";
+            this.providersReportBtn.Size = new System.Drawing.Size(75, 23);
+            this.providersReportBtn.TabIndex = 61;
+            this.providersReportBtn.Text = "ОТЧЕТ";
+            this.providersReportBtn.UseVisualStyleBackColor = true;
+            this.providersReportBtn.Click += new System.EventHandler(this.providersReportBtn_Click);
             // 
             // locationTextBox
             // 
@@ -200,20 +201,6 @@ namespace kursologV2
             this.productsProvidersDataGridView.TabIndex = 98;
             this.productsProvidersDataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.productsProvidersDataGridView_RowHeaderMouseClick);
             // 
-            // suetaDataSet
-            // 
-            this.suetaDataSet.DataSetName = "suetaDataSet";
-            this.suetaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productProvidersBindingSource
-            // 
-            this.productProvidersBindingSource.DataMember = "ProductProviders";
-            this.productProvidersBindingSource.DataSource = this.suetaDataSet;
-            // 
-            // productProvidersTableAdapter
-            // 
-            this.productProvidersTableAdapter.ClearBeforeFill = true;
-            // 
             // providerIdDataGridViewTextBoxColumn
             // 
             this.providerIdDataGridViewTextBoxColumn.DataPropertyName = "ProviderId";
@@ -249,6 +236,20 @@ namespace kursologV2
             this.deliveryTimeDataGridViewTextBoxColumn.Name = "deliveryTimeDataGridViewTextBoxColumn";
             this.deliveryTimeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // productProvidersBindingSource
+            // 
+            this.productProvidersBindingSource.DataMember = "ProductProviders";
+            this.productProvidersBindingSource.DataSource = this.suetaDataSet;
+            // 
+            // suetaDataSet
+            // 
+            this.suetaDataSet.DataSetName = "suetaDataSet";
+            this.suetaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productProvidersTableAdapter
+            // 
+            this.productProvidersTableAdapter.ClearBeforeFill = true;
+            // 
             // deliveryDateTimePicker
             // 
             this.deliveryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
@@ -275,7 +276,7 @@ namespace kursologV2
             this.Controls.Add(this.deliveryDateTimePicker);
             this.Controls.Add(this.productsProvidersDataGridView);
             this.Controls.Add(this.controlsPanel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.providersReportBtn);
             this.Controls.Add(this.locationTextBox);
             this.Controls.Add(this.providerNameTextBox);
             this.Controls.Add(this.label5);
@@ -289,15 +290,15 @@ namespace kursologV2
             this.Click += new System.EventHandler(this.ProductProvidersForm_Click);
             this.controlsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.productsProvidersDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productProvidersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button providersReportBtn;
         private System.Windows.Forms.TextBox locationTextBox;
         private System.Windows.Forms.TextBox providerNameTextBox;
         private System.Windows.Forms.Label label5;

@@ -207,5 +207,13 @@ namespace kursologV2
             Show();
             updateInputs();
         }
+
+        private void NDSReportBtn_Click(object sender, EventArgs e)
+        {
+            ReportNDSForm f = new ReportNDSForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

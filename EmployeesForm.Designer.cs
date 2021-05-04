@@ -31,6 +31,8 @@ namespace kursologV2
         {
             this.components = new System.ComponentModel.Container();
             this.positionComboBox = new System.Windows.Forms.ComboBox();
+            this.positionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.suetaDataSet = new kursologV2.suetaDataSet();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,20 +47,18 @@ namespace kursologV2
             this.saveButton = new System.Windows.Forms.Button();
             this.phoneTextBox = new System.Windows.Forms.MaskedTextBox();
             this.employeesDataGridView = new System.Windows.Forms.DataGridView();
-            this.suetaDataSet = new kursologV2.suetaDataSet();
-            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeesTableAdapter = new kursologV2.suetaDataSetTableAdapters.EmployeesTableAdapter();
             this.employeeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.positionIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.positionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesTableAdapter = new kursologV2.suetaDataSetTableAdapters.EmployeesTableAdapter();
             this.positionsTableAdapter = new kursologV2.suetaDataSetTableAdapters.PositionsTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.positionsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).BeginInit();
             this.controlsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.positionsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // positionComboBox
@@ -71,6 +71,16 @@ namespace kursologV2
             this.positionComboBox.Size = new System.Drawing.Size(328, 21);
             this.positionComboBox.TabIndex = 15;
             this.positionComboBox.ValueMember = "PositionId";
+            // 
+            // positionsBindingSource
+            // 
+            this.positionsBindingSource.DataMember = "Positions";
+            this.positionsBindingSource.DataSource = this.suetaDataSet;
+            // 
+            // suetaDataSet
+            // 
+            this.suetaDataSet.DataSetName = "suetaDataSet";
+            this.suetaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // fullNameTextBox
             // 
@@ -125,6 +135,7 @@ namespace kursologV2
             this.employeesListReportBtn.TabIndex = 60;
             this.employeesListReportBtn.Text = "ОТЧЕТ";
             this.employeesListReportBtn.UseVisualStyleBackColor = true;
+            this.employeesListReportBtn.Click += new System.EventHandler(this.employeesListReportBtn_Click);
             // 
             // label5
             // 
@@ -213,20 +224,6 @@ namespace kursologV2
             this.employeesDataGridView.TabIndex = 63;
             this.employeesDataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.employeesDataGridView_RowHeaderMouseClick);
             // 
-            // suetaDataSet
-            // 
-            this.suetaDataSet.DataSetName = "suetaDataSet";
-            this.suetaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeesBindingSource
-            // 
-            this.employeesBindingSource.DataMember = "Employees";
-            this.employeesBindingSource.DataSource = this.suetaDataSet;
-            // 
-            // employeesTableAdapter
-            // 
-            this.employeesTableAdapter.ClearBeforeFill = true;
-            // 
             // employeeIdDataGridViewTextBoxColumn
             // 
             this.employeeIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeId";
@@ -255,10 +252,14 @@ namespace kursologV2
             this.positionIdDataGridViewTextBoxColumn.Name = "positionIdDataGridViewTextBoxColumn";
             this.positionIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // positionsBindingSource
+            // employeesBindingSource
             // 
-            this.positionsBindingSource.DataMember = "Positions";
-            this.positionsBindingSource.DataSource = this.suetaDataSet;
+            this.employeesBindingSource.DataMember = "Employees";
+            this.employeesBindingSource.DataSource = this.suetaDataSet;
+            // 
+            // employeesTableAdapter
+            // 
+            this.employeesTableAdapter.ClearBeforeFill = true;
             // 
             // positionsTableAdapter
             // 
@@ -284,11 +285,11 @@ namespace kursologV2
             this.Text = "EmployeesForm";
             this.Load += new System.EventHandler(this.EmployeesForm_Load);
             this.Click += new System.EventHandler(this.EmployeesForm_Click);
+            ((System.ComponentModel.ISupportInitialize)(this.positionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).EndInit();
             this.controlsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.positionsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

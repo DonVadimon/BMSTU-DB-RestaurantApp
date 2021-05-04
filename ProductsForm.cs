@@ -172,5 +172,13 @@ namespace kursologV2
         {
             Close();
         }
+
+        private void productsReportBtn_Click(object sender, EventArgs e)
+        {
+            ReportProductsForm f = new ReportProductsForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

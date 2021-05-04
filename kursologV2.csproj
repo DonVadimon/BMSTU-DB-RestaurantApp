@@ -158,6 +158,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportCustomerInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportCustomerInfoForm.Designer.cs">
+      <DependentUpon>ReportCustomerInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportDishesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -298,6 +304,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportCustomerInfoForm.resx">
+      <DependentUpon>ReportCustomerInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportDishesForm.resx">
       <DependentUpon>ReportDishesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -408,6 +417,7 @@
     <EmbeddedResource Include="ReportNDS.rdlc" />
     <EmbeddedResource Include="ReportTables.rdlc" />
     <EmbeddedResource Include="ReportProducts.rdlc" />
+    <EmbeddedResource Include="ReportCustomerInfo.rdlc" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

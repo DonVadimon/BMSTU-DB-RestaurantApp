@@ -35,8 +35,7 @@ namespace kursologV2
             this.dishesTypesGroupBox = new System.Windows.Forms.GroupBox();
             this.RBtableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.NDSReportBtn = new System.Windows.Forms.Button();
             this.unitsComboBox = new System.Windows.Forms.ComboBox();
             this.unitsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suetaDataSet = new kursologV2.suetaDataSet();
@@ -44,7 +43,6 @@ namespace kursologV2
             this.label9 = new System.Windows.Forms.Label();
             this.descriptionRichTextBox = new System.Windows.Forms.RichTextBox();
             this.titleTextBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -150,23 +148,15 @@ namespace kursologV2
             this.label10.TabIndex = 89;
             this.label10.Text = "Блюда";
             // 
-            // button2
+            // NDSReportBtn
             // 
-            this.button2.Location = new System.Drawing.Point(255, 800);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 83;
-            this.button2.Text = "ОТЧЕТ";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(255, 760);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 82;
-            this.button1.Text = "ОТЧЕТ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.NDSReportBtn.Location = new System.Drawing.Point(255, 760);
+            this.NDSReportBtn.Name = "NDSReportBtn";
+            this.NDSReportBtn.Size = new System.Drawing.Size(75, 23);
+            this.NDSReportBtn.TabIndex = 82;
+            this.NDSReportBtn.Text = "ОТЧЕТ";
+            this.NDSReportBtn.UseVisualStyleBackColor = true;
+            this.NDSReportBtn.Click += new System.EventHandler(this.NDSReportBtn_Click);
             // 
             // unitsComboBox
             // 
@@ -219,15 +209,6 @@ namespace kursologV2
             this.titleTextBox.Name = "titleTextBox";
             this.titleTextBox.Size = new System.Drawing.Size(216, 20);
             this.titleTextBox.TabIndex = 77;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(46, 805);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 13);
-            this.label8.TabIndex = 76;
-            this.label8.Text = "Состав блюда";
             // 
             // label7
             // 
@@ -479,14 +460,12 @@ namespace kursologV2
             this.Controls.Add(this.priceNumericUpDown);
             this.Controls.Add(this.dishesTypesGroupBox);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.NDSReportBtn);
             this.Controls.Add(this.unitsComboBox);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.descriptionRichTextBox);
             this.Controls.Add(this.titleTextBox);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -520,14 +499,12 @@ namespace kursologV2
         private System.Windows.Forms.NumericUpDown priceNumericUpDown;
         private System.Windows.Forms.GroupBox dishesTypesGroupBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button NDSReportBtn;
         private System.Windows.Forms.ComboBox unitsComboBox;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RichTextBox descriptionRichTextBox;
         private System.Windows.Forms.TextBox titleTextBox;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

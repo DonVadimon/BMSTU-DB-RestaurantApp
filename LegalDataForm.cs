@@ -105,5 +105,13 @@ namespace kursologV2
         {
             Close();
         }
+
+        private void clientInfoBtn_Click(object sender, EventArgs e)
+        {
+            ReportCustomerInfoForm f = new ReportCustomerInfoForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

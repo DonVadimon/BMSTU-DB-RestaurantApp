@@ -78,6 +78,7 @@ namespace kursologV2
             this.clientInfoBtn.TabIndex = 93;
             this.clientInfoBtn.Text = "ОТЧЕТ";
             this.clientInfoBtn.UseVisualStyleBackColor = true;
+            this.clientInfoBtn.Click += new System.EventHandler(this.clientInfoBtn_Click);
             // 
             // closeBtn
             // 
@@ -102,6 +103,7 @@ namespace kursologV2
             // directorComboBox
             // 
             this.directorComboBox.DataSource = this.employeesBindingSource;
+            this.directorComboBox.DisplayMember = "EmployeeId";
             this.directorComboBox.FormattingEnabled = true;
             this.directorComboBox.Location = new System.Drawing.Point(268, 491);
             this.directorComboBox.Name = "directorComboBox";

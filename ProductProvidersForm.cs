@@ -158,5 +158,13 @@ namespace kursologV2
                 clearInputs();
             }
         }
+
+        private void providersReportBtn_Click(object sender, EventArgs e)
+        {
+            ReportProvidersForm f = new ReportProvidersForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

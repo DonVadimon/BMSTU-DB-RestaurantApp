@@ -100,6 +100,7 @@ namespace kursologV2
             this.providersListBtn.TabIndex = 18;
             this.providersListBtn.Text = "Поставщики";
             this.providersListBtn.UseVisualStyleBackColor = true;
+            this.providersListBtn.Click += new System.EventHandler(this.providersListBtn_Click);
             // 
             // positionsListBtn
             // 

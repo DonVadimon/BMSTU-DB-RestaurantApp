@@ -181,6 +181,17 @@
     <Compile Include="ReportPositionsForm.Designer.cs">
       <DependentUpon>ReportPositionsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportProvidersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportProvidersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportProvidersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportProvidersForm.Designer.cs">
+      <DependentUpon>ReportProvidersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +284,9 @@
     <EmbeddedResource Include="ReportPositionsForm.resx">
       <DependentUpon>ReportPositionsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportProvidersForm.resx">
+      <DependentUpon>ReportProvidersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportsForm.resx">
       <DependentUpon>ReportsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +331,17 @@
     <None Include="ReportEmployeesDataSet.xss">
       <DependentUpon>ReportEmployeesDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ReportProvidersDataSet.xsc">
+      <DependentUpon>ReportProvidersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReportProvidersDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportProvidersDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportProvidersDataSet.xss">
+      <DependentUpon>ReportProvidersDataSet.xsd</DependentUpon>
+    </None>
     <None Include="suetaDataSet.xsc">
       <DependentUpon>suetaDataSet.xsd</DependentUpon>
     </None>
@@ -336,6 +361,7 @@
     <EmbeddedResource Include="ReportEmployees.rdlc" />
     <EmbeddedResource Include="ReportPositions.rdlc" />
     <EmbeddedResource Include="ReportDishes.rdlc" />
+    <EmbeddedResource Include="ReportProviders.rdlc" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

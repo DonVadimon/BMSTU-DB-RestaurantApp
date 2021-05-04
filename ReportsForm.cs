@@ -45,5 +45,13 @@ namespace kursologV2
             f.ShowDialog(this);
             Show();
         }
+
+        private void providersListBtn_Click(object sender, EventArgs e)
+        {
+            ReportProvidersForm f = new ReportProvidersForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
     }
 }

@@ -266,6 +266,7 @@
                                   <Value>=Fields!Salary.Value</Value>
                                   <Style>
                                     <FontSize>14pt</FontSize>
+                                    <Format>0.00'₽';(0.00'₽')</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -284,8 +285,10 @@
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>ru-RU</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>

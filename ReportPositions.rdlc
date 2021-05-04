@@ -137,6 +137,7 @@
                               <Value>=Fields!Salary.Value</Value>
                               <Style>
                                 <FontSize>14pt</FontSize>
+                                <Format>0.00'₽';(0.00'₽')</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -155,8 +156,10 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
+                        <rd:FormatSymbolCulture>ru-RU</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -180,8 +183,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>ReportPositionsDataSet</DataSetName>
-        <Height>6.27683cm</Height>
-        <Width>24.19203cm</Width>
+        <Height>6.27682cm</Height>
+        <Width>24.19204cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -192,7 +195,7 @@
     <Height>3.47119in</Height>
     <Style />
   </Body>
-  <Width>9.52442in</Width>
+  <Width>9.52443in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>

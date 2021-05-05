@@ -24,7 +24,16 @@ namespace kursologV2
             f.ShowDialog(this);
             if (f.isLoggedIn)
             {
-                Show();
+                if (f.isAdmin)
+                {
+                    Show();
+                }
+                else
+                {
+                    ReportsForm reports = new ReportsForm();
+                    reports.ShowDialog(this);
+                    Close();
+                }
             }
             else
             {

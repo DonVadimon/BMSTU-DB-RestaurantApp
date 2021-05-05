@@ -13,10 +13,13 @@ namespace kursologV2
     public partial class LoginForm : Form
     {
         public bool isLoggedIn { get; set; }
+        public bool isAdmin { get; set; }
+
         public LoginForm()
         {
             InitializeComponent();
             isLoggedIn = false;
+            isAdmin = false;
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -33,6 +36,7 @@ namespace kursologV2
             if (pass == requiredPass)
             {
                 isLoggedIn = true;
+                isAdmin = UserComboBox.Text.ToLower() == "admin" ? true : false;
                 this.Close();
             }
             else

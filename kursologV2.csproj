@@ -238,8 +238,6 @@
     <Compile Include="ReportTablesForm.Designer.cs">
       <DependentUpon>ReportTablesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQLQueryBuilder.cs" />
-    <Compile Include="SQLQueryDispatcher.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="StuffFromsForm.cs">
       <SubType>Form</SubType>

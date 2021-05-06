@@ -68,11 +68,6 @@ namespace kursologV2
         public void updateRow()
         {
             throw new NotImplementedException();
-
-            /*
-             * dishesToProductsTableAdapter.Update(DishToProductsModel.dishId, productsTableAdapter.GetData().FirstOrDefault(pr => pr.Product == productsComboBox.Text).ProductId,
-                DishToProductsModel.dishId, DishToProductsModel.productId);
-            */
         }
 
         public void updateInputs()

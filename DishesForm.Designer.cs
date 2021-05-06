@@ -185,6 +185,7 @@ namespace kursologV2
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(125, 20);
             this.searchTextBox.TabIndex = 80;
+            this.searchTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchTextBox_KeyUp);
             // 
             // label9
             // 

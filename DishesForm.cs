@@ -141,15 +141,20 @@ namespace kursologV2
                 descriptionRichTextBox.Text.Trim().Length == 0 || RBtableLayoutPanel.Controls.OfType<RadioButton>().Any(r => r.Checked == true) == false;
         }
 
+        private void mapPropsFromDGVToModel(int rowIndex)
+        {
+            DishModel.id = Convert.ToInt32(dishesDataGridView.Rows[rowIndex].Cells[0].Value.ToString());
+            DishModel.price = Convert.ToInt32(dishesDataGridView.Rows[rowIndex].Cells[1].Value.ToString());
+            DishModel.title = dishesDataGridView.Rows[rowIndex].Cells[2].Value.ToString();
+            DishModel.unitId = Convert.ToInt32(dishesDataGridView.Rows[rowIndex].Cells[3].Value.ToString());
+            DishModel.weight = Convert.ToInt32(dishesDataGridView.Rows[rowIndex].Cells[4].Value.ToString());
+            DishModel.description = dishesDataGridView.Rows[rowIndex].Cells[5].Value.ToString();
+            DishModel.typeId = Convert.ToInt32(dishesDataGridView.Rows[rowIndex].Cells[6].Value.ToString());
+        }
+
         private void dishesDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            DishModel.id = Convert.ToInt32(dishesDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString());
-            DishModel.price = Convert.ToInt32(dishesDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
-            DishModel.title = dishesDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-            DishModel.unitId = Convert.ToInt32(dishesDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString());
-            DishModel.weight = Convert.ToInt32(dishesDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString());
-            DishModel.description = dishesDataGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
-            DishModel.typeId = Convert.ToInt32(dishesDataGridView.Rows[e.RowIndex].Cells[6].Value.ToString());
+            mapPropsFromDGVToModel(e.RowIndex);
             updateInputs();
         }
 
@@ -214,6 +219,28 @@ namespace kursologV2
             Hide();
             f.ShowDialog(this);
             Show();
+        }
+
+        private void searchTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (searchTextBox.Text.Trim().Length == 0 || e.KeyCode != Keys.Enter)
+            {
+                return;
+            }
+            var findedRow = dishesTableAdapter.GetData().FirstOrDefault(d => d.Title.StartsWith(searchTextBox.Text));
+            if (findedRow == null)
+            {
+                MessageBox.Show("Ничего не найдено");
+                return;
+            }
+            int rowIndex = 0;
+            for (int i = 0; i < dishesDataGridView.Rows.Count; i++)
+            {
+                dishesDataGridView.Rows[i].Selected = dishesDataGridView.Rows[i].Cells[2].Value.ToString() == findedRow.Title ? true : false;
+                rowIndex = dishesDataGridView.Rows[i].Selected ? i : rowIndex;
+            }
+            mapPropsFromDGVToModel(rowIndex);
+            updateInputs();
         }
     }
 }

@@ -86,6 +86,7 @@ namespace kursologV2
                 "WHERE(Orders.OrderId = " + OrderModel.id.ToString() + ")";
             dishesDataGridView.DataSource = DGVDataSourceChanger.getNewDGVDataSource(query);
             changeOrderDishesButton.Enabled = true;
+            orderInfoBtn.Enabled = true;
         }
 
         public void clearInputs()
@@ -93,6 +94,7 @@ namespace kursologV2
             waitersComboBox.SelectedIndex = -1;
             tableComboBox.SelectedIndex = -1;
             changeOrderDishesButton.Enabled = false;
+            orderInfoBtn.Enabled = false;
             for (int i = 0; i < ordersDataGridView.Rows.Count; i++)
             {
                 ordersDataGridView.Rows[i].Selected = false;
@@ -197,6 +199,14 @@ namespace kursologV2
         private void ordersPriceReportBtn_Click(object sender, EventArgs e)
         {
             ReportOrdersForm f = new ReportOrdersForm();
+            Hide();
+            f.ShowDialog(this);
+            Show();
+        }
+
+        private void orderInfoBtn_Click(object sender, EventArgs e)
+        {
+            ReportOrderItemsForm f = new ReportOrderItemsForm(OrderModel.id);
             Hide();
             f.ShowDialog(this);
             Show();

@@ -192,6 +192,17 @@
     <Compile Include="ReportNDSForm.Designer.cs">
       <DependentUpon>ReportNDSForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportOrderItemsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportOrderItemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportOrderItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportOrderItemsForm.Designer.cs">
+      <DependentUpon>ReportOrderItemsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportOrdersDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -325,6 +336,10 @@
     <EmbeddedResource Include="ReportNDSForm.resx">
       <DependentUpon>ReportNDSForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportOrderItems.rdlc" />
+    <EmbeddedResource Include="ReportOrderItemsForm.resx">
+      <DependentUpon>ReportOrderItemsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportOrdersForm.resx">
       <DependentUpon>ReportOrdersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,6 +409,17 @@
     </None>
     <None Include="ReportEmployeesDataSet.xss">
       <DependentUpon>ReportEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReportOrderItemsDataSet.xsc">
+      <DependentUpon>ReportOrderItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReportOrderItemsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportOrderItemsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportOrderItemsDataSet.xss">
+      <DependentUpon>ReportOrderItemsDataSet.xsd</DependentUpon>
     </None>
     <None Include="ReportOrdersDataSet.xsc">
       <DependentUpon>ReportOrdersDataSet.xsd</DependentUpon>

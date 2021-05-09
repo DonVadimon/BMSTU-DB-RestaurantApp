@@ -57,6 +57,8 @@ namespace kursologV2
             this.getWaitersToolStrip = new System.Windows.Forms.ToolStrip();
             this.getWaitersToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.changeOrderDishesButton = new System.Windows.Forms.Button();
+            this.orderInfoBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suetaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
@@ -295,11 +297,32 @@ namespace kursologV2
             this.changeOrderDishesButton.UseVisualStyleBackColor = true;
             this.changeOrderDishesButton.Click += new System.EventHandler(this.changeOrderDishesButton_Click);
             // 
+            // orderInfoBtn
+            // 
+            this.orderInfoBtn.Location = new System.Drawing.Point(475, 667);
+            this.orderInfoBtn.Name = "orderInfoBtn";
+            this.orderInfoBtn.Size = new System.Drawing.Size(77, 23);
+            this.orderInfoBtn.TabIndex = 66;
+            this.orderInfoBtn.Text = "ОТЧЕТ";
+            this.orderInfoBtn.UseVisualStyleBackColor = true;
+            this.orderInfoBtn.Click += new System.EventHandler(this.orderInfoBtn_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(331, 673);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(121, 13);
+            this.label5.TabIndex = 67;
+            this.label5.Text = "Информация о заказе";
+            // 
             // OrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 724);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.orderInfoBtn);
             this.Controls.Add(this.changeOrderDishesButton);
             this.Controls.Add(this.getWaitersToolStrip);
             this.Controls.Add(this.dishesDataGridView);
@@ -359,5 +382,7 @@ namespace kursologV2
         private System.Windows.Forms.ToolStrip getWaitersToolStrip;
         private System.Windows.Forms.ToolStripButton getWaitersToolStripButton;
         private System.Windows.Forms.Button changeOrderDishesButton;
+        private System.Windows.Forms.Button orderInfoBtn;
+        private System.Windows.Forms.Label label5;
     }
 }
